@@ -1,0 +1,127 @@
+.section {
+  padding: clamp(4rem, 10vh, 8rem) 0;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+}
+
+.leadLink,
+.card {
+  display: block;
+}
+
+.leadFigure {
+  overflow: clip;
+}
+
+.leadImage {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  transition: transform 1.4s var(--ease-out);
+}
+
+.leadLink:hover .leadImage {
+  transform: scale(1.035);
+}
+
+.leadMeta,
+.cardMeta {
+  display: flex;
+  gap: 1.1rem;
+  padding-top: 1.2rem;
+}
+
+.index {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  padding-top: 0.3rem;
+}
+
+.name {
+  font-size: clamp(1.5rem, 3.2vw, 2.1rem);
+  font-weight: 500;
+}
+
+.desc {
+  margin-top: 0.3rem;
+  color: var(--color-muted);
+  font-size: 0.92rem;
+}
+
+.price {
+  margin-top: 0.55rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  color: var(--color-ink);
+}
+
+.supporting {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2.2rem, 4vw, 3.2rem);
+  align-content: start;
+}
+
+/* Secondary plates sit lower — asymmetric rhythm */
+.supporting > :nth-child(2) {
+  transform: translateY(0);
+}
+
+.cardFigure {
+  overflow: clip;
+}
+
+.cardImage {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 1.4s var(--ease-out);
+}
+
+.card:hover .cardImage {
+  transform: scale(1.045);
+}
+
+.more {
+  margin-top: clamp(2.8rem, 6vw, 4rem);
+  text-align: center;
+}
+
+.moreLink {
+  font-size: 0.72rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--color-accent);
+  padding-bottom: 0.45rem;
+  transition: color 0.3s var(--ease-out);
+}
+
+.moreLink:hover {
+  color: var(--color-accent);
+}
+
+@media (min-width: 900px) {
+  .layout {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    align-items: start;
+  }
+
+  .supporting {
+    padding-top: clamp(3rem, 7vw, 6rem);
+    grid-template-columns: 1fr;
+  }
+
+  /* El segundo plato de apoyo baja aún más — rompe la fila */
+  .supporting > :nth-child(2) {
+    margin-left: clamp(1.5rem, 4vw, 4rem);
+  }
+}

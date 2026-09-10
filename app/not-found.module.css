@@ -1,0 +1,68 @@
+.section {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  padding: calc(var(--nav-h) + 4rem) 0 5rem;
+}
+
+.kicker {
+  font-size: 0.72rem;
+  letter-spacing: 0.3em;
+  color: var(--color-accent);
+}
+
+.title {
+  margin-top: 1rem;
+  font-size: clamp(2.6rem, 7vw, 4.8rem);
+  font-weight: 400;
+}
+
+.copy {
+  margin-top: 1.2rem;
+  color: var(--color-muted);
+  max-width: 30em;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2.2rem;
+}
+
+.primary,
+.secondary {
+  font-size: 0.7rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  padding: 0.95rem 1.8rem;
+  transition:
+    background 0.35s var(--ease-out),
+    color 0.35s var(--ease-out),
+    border-color 0.35s var(--ease-out);
+}
+
+.primary {
+  background: var(--color-ink);
+  color: var(--color-base);
+}
+
+.primary:hover {
+  background: var(--color-accent);
+}
+
+.secondary {
+  border: 1px solid var(--color-ink);
+}
+
+.secondary:hover {
+  background: var(--color-ink);
+  color: var(--color-base);
+}
+
+.phone {
+  margin-top: 2.2rem;
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--color-muted);
+}

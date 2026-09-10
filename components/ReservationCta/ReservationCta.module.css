@@ -1,0 +1,83 @@
+.section {
+  background: var(--color-base-soft);
+  padding: clamp(4.5rem, 11vh, 8.5rem) 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2.8rem, 6vw, 5rem);
+}
+
+.intro {
+  max-width: 30em;
+}
+
+.title {
+  font-size: clamp(2.4rem, 6.4vw, 4.4rem);
+  font-weight: 400;
+  margin-top: 0.9rem;
+  color: var(--color-base);
+}
+
+.copy {
+  margin-top: 1.4rem;
+  color: var(--color-muted);
+  max-width: 28em;
+  font-size: 0.98rem;
+}
+
+.phoneInline {
+  color: var(--color-ink);
+  border-bottom: 1px solid var(--color-accent);
+  white-space: nowrap;
+}
+
+.phoneInline:hover {
+  color: var(--color-accent);
+}
+
+.notes {
+  margin-top: 1.9rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.notes li {
+  position: relative;
+  padding-left: 1.3rem;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.notes li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 0.55rem;
+  height: 1px;
+  background: var(--color-accent);
+}
+
+.formWrap {
+  width: 100%;
+}
+
+.formCard {
+  background: var(--color-base);
+  border: 1px solid var(--line-soft);
+  padding: clamp(1.8rem, 4.5vw, 3rem);
+}
+
+@media (min-width: 960px) {
+  .grid {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    align-items: start;
+  }
+
+  .intro {
+    position: sticky;
+    top: 120px;
+  }
+}

@@ -1,0 +1,51 @@
+.section {
+  padding: clamp(3.2rem, 8vh, 5.5rem) 0;
+  border-top: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.quote p {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.3rem, 3.4vw, 2rem);
+  font-weight: 400;
+  max-width: 20em;
+}
+
+.ratingBox {
+  display: grid;
+  gap: 0.15rem;
+  justify-items: start;
+  padding-left: 1.6rem;
+  border-left: 1px solid var(--line);
+}
+
+.rating {
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--color-accent);
+}
+
+.ratingLabel {
+  font-size: 0.66rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.ratingNote {
+  font-size: 0.62rem;
+  color: var(--color-muted);
+  opacity: 0.8;
+  margin-top: 0.35rem;
+}

@@ -1,0 +1,79 @@
+.section {
+  padding: clamp(4.5rem, 11vh, 8.5rem) 0 clamp(4rem, 9vh, 7rem);
+  background: var(--color-ink);
+  color: var(--color-base);
+}
+
+.wall {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(0.9rem, 2.2vw, 1.8rem);
+  margin-top: clamp(2.5rem, 6vw, 4.5rem);
+  align-items: start;
+}
+
+.cell {
+  min-width: 0;
+}
+
+/* Editorial stagger: alternate columns up/down */
+.cell:nth-child(even) {
+  transform: none;
+}
+
+.figure {
+  position: relative;
+  overflow: clip;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  transition:
+    transform 1.2s var(--ease-out),
+    opacity 0.6s var(--ease-out);
+}
+
+.figure:hover .image {
+  transform: scale(1.045);
+}
+
+.caption {
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  padding-top: 0.75rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(244, 239, 231, 0.66);
+  transition: color 0.4s var(--ease-out);
+}
+
+.captionIndex {
+  font-family: var(--font-serif);
+  font-size: 0.8rem;
+  color: var(--color-accent);
+}
+
+.note {
+  margin-top: clamp(3rem, 7vw, 5rem);
+  max-width: 44em;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.05rem, 2.4vw, 1.45rem);
+  color: rgba(244, 239, 231, 0.8);
+}
+
+@media (min-width: 900px) {
+  .wall {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Desfase de la tercera columna — el mural respira */
+  .cell:nth-child(3n) {
+    margin-top: clamp(2rem, 4vw, 3.5rem);
+  }
+}

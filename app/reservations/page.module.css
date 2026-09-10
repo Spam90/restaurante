@@ -1,0 +1,7 @@
+.houseNote {
+  padding-block: 0 4.5rem;
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--color-muted);
+  font-size: 1.05rem;
+}

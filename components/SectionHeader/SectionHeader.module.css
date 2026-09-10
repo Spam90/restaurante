@@ -1,0 +1,50 @@
+.header {
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.index {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+}
+
+.hairline {
+  width: clamp(2.5rem, 6vw, 5rem);
+  height: 1px;
+  background: var(--line);
+}
+
+.label {
+  color: var(--color-muted);
+}
+
+.title {
+  margin-top: clamp(1.1rem, 3vw, 1.8rem);
+  font-size: clamp(2.1rem, 5.2vw, 3.9rem);
+  max-width: 14em;
+}
+
+/* Tone for dark bands */
+.dark .index {
+  color: var(--color-accent);
+}
+
+.dark .hairline {
+  background: var(--line-light);
+}
+
+.dark .label {
+  color: rgba(244, 239, 231, 0.62);
+}
+
+.dark .title {
+  color: var(--color-base);
+}

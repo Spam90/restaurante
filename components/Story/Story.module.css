@@ -1,0 +1,83 @@
+.section {
+  padding: clamp(5rem, 12vh, 9rem) 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2.5rem, 5vw, 5rem);
+}
+
+.imageCol {
+  position: relative;
+}
+
+.figure {
+  overflow: clip;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  transition: transform 1.5s var(--ease-out);
+}
+
+.imageCol:hover .image {
+  transform: scale(1.03);
+}
+
+.year {
+  position: absolute;
+  left: 0;
+  bottom: -0.6rem;
+  font-size: 0.64rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  background: var(--color-base);
+  padding: 0.5rem 0.9rem 0 0;
+}
+
+.textCol {
+  max-width: 34em;
+}
+
+.title {
+  font-size: clamp(2.4rem, 6.5vw, 4.4rem);
+  font-weight: 400;
+  margin-top: 0.9rem;
+}
+
+.copy {
+  margin-top: 1.4rem;
+  color: var(--color-muted);
+  font-size: 1rem;
+  max-width: 32em;
+}
+
+.signature {
+  display: inline-block;
+  margin-top: 1.8rem;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--color-accent);
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: minmax(0, 6fr) minmax(0, 6fr);
+    align-items: center;
+  }
+
+  /* Asymmetric offset — image column sits higher */
+  .imageCol {
+    margin-bottom: 3.5rem;
+  }
+
+  .textCol {
+    padding-top: 2rem;
+  }
+}
